@@ -1,0 +1,465 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.container{
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	background: url('bg.jpg');
+	background-size: cover;
+}
+.display{
+	position: absolute;
+	height: 480px;
+	width: 820px;
+	backdrop-filter: blur(5px);
+	left: 20%;
+	top: 3%;
+	box-shadow: 3px 3px 14px rgba(0, 0, 0, .8),
+	-3px -3px 14px rgba(0, 0, 0, .7);
+	border-radius: 20px;
+}
+.gender{
+	position: absolute;
+	height: 70vh;
+	width: 250px;
+	backdrop-filter: blur(2px) grayscale(100%);
+	top: 3%;
+	left: .7%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column; 
+	box-shadow: 3px 3px 14px rgba(0, 0, 0, .7),
+	-3px -3px 14px rgba(0, 0, 0, .7);
+	border-radius: 20px;
+}
+.gender div,
+.colors div{
+	height: 150px;
+	width: 150px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.fpart{
+	background:url('dump/face.png');
+	background-size: cover;
+	transform-style: preserve-3d;
+	transform: perspective(1000px);
+}
+.fpart p,
+.hpart p,
+.epart p,
+.ebpart p,
+.lpart p,
+.bpart p{
+	transform: translateZ(40px);
+	font-weight: 700;
+	font-size: 1.1em;
+}
+.fpart:hover,
+.hpart:hover,
+.epart:hover,
+.ebpart:hover,
+.lpart:hover,
+.bpart:hover{
+	text-shadow: 1px 1px 4px rgba(0, 0, 0, .7);
+}
+.hpart{
+	background:url('dump/hair.png');
+	background-size: cover;
+	transform-style: preserve-3d;
+	transform: perspective(1000px);
+}
+.epart{
+	background:url('dump/eyes.png');
+	background-size: cover;
+	transform-style: preserve-3d;
+	transform: perspective(1000px);
+}
+.ebpart{
+	background:url('dump/ebrow.png');
+	background-size: cover;
+	transform-style: preserve-3d;
+	transform: perspective(1000px);
+}
+.lpart{
+	background:url('dump/lips.png');
+	background-size: cover;
+	transform-style: preserve-3d;
+	transform: perspective(1000px);
+}
+.bpart{
+	background:url('dump/beard.png');
+	background-size: cover;
+	transform-style: preserve-3d;
+	transform: perspective(1000px);
+}
+.features{
+	position: absolute;
+	height: 150px;
+	width: 820px;
+	background: transparent;
+	bottom: 1.7%;
+	left: 20%; 
+}
+#fface{
+	position: fixed;
+	bottom: 2%;/* -30% */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	backdrop-filter: blur(2px) grayscale(100%);
+	box-shadow: 3px 3px 14px rgba(0, 0, 0, .7),
+	-3px -3px 14px rgba(0, 0, 0, .7);
+	border-radius: 20px;
+	height: 120px;
+	width: 820px;
+	transition: 1s;
+}
+#fhair{
+	position: fixed;
+	bottom: -32%;/* -30% */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	height: 120px;
+	width: 820px;
+	transition: 1s;
+	backdrop-filter: blur(2px) grayscale(100%);
+	box-shadow: 3px 3px 14px rgba(0, 0, 0, .7),
+	-3px -3px 14px rgba(0, 0, 0, .7);
+}
+#feyes{
+	position: fixed;
+	bottom: -32%;/* -30% */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	height: 120px;
+	width: 820px;
+	transition: 1s;
+	backdrop-filter: blur(2px) grayscale(100%);
+	box-shadow: 3px 3px 14px rgba(0, 0, 0, .7),
+	-3px -3px 14px rgba(0, 0, 0, .7);
+}
+#febrow{
+	position: fixed;
+	bottom: -32%;/* -30% */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	height: 120px;
+	width: 820px;
+	transition: 1s;
+	backdrop-filter: blur(2px) grayscale(100%);
+	box-shadow: 3px 3px 14px rgba(0, 0, 0, .7),
+	-3px -3px 14px rgba(0, 0, 0, .7);
+}
+#flips{
+	position: fixed;
+	bottom: -32%;/* -30% */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	height: 120px;
+	width: 820px;
+	transition: 1s;
+	backdrop-filter: blur(2px) grayscale(100%);
+	box-shadow: 3px 3px 14px rgba(0, 0, 0, .7),
+	-3px -3px 14px rgba(0, 0, 0, .7);
+}
+#fbeard{
+	position: fixed;
+	bottom: -32%;/* -30% */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	height: 120px;
+	width: 820px;
+	transition: 1s;
+	backdrop-filter: blur(2px) grayscale(100%);
+	box-shadow: 3px 3px 14px rgba(0, 0, 0, .7),
+	-3px -3px 14px rgba(0, 0, 0, .7);
+}
+#fface > div,
+#fhair > div,
+#feyes > div,
+#febrow > div,
+#flips > div,
+#fbeard > div{
+	height: 100px;
+	width: 100px;
+	margin: 5px;
+	background-size: cover;
+	display: grid;
+	place-content: center;
+	margin-left: 70px;
+}
+.fbeard1:hover,
+.fbeard2:hover,
+.fbeard3:hover,
+.fface1:hover,
+.fface2:hover,
+.fface3:hover,
+.flips1:hover,
+.flips2:hover,
+.flips3:hover,
+.fhair1:hover,
+.fhair2:hover,
+.fhair3:hover,
+.feyes1:hover,
+.feyes2:hover,
+.feyes3:hover,
+.febrow1:hover,
+.febrow2:hover,
+.febrow3:hover{
+	filter: invert(1);
+	transition: .7s;
+}
+.fbeard1{
+	background: url('dump/beard/beard1.png');
+	transition: .7s;
+}
+.fbeard2{
+	background: url('dump/beard/beard2.png');
+	transition: .7s;
+}
+.fbeard3{
+	background: url('dump/beard/beard3.png');
+	transition: .7s;
+}
+.flips1{
+	background: url('dump/lips/lips1.png');
+	transition: .7s;
+}
+.flips2{
+	background: url('dump/lips/lips2.png');
+	transition: .7s;
+}
+.flips3{
+	background: url('dump/lips/lips3.png');
+	transition: .7s;
+}
+.febrow1{
+	background: url('dump/ebrow/ebrow1.png');
+	transition: .7s;
+}
+.febrow2{
+	background: url('dump/ebrow/ebrow2.png');
+	transition: .7s;
+}
+.febrow3{
+	background: url('dump/ebrow/ebrow3.png');
+	transition: .7s;
+}
+.feyes1{
+	background: url('dump/eyes/eyes1.png');
+	transition: .7s;
+}
+.feyes2{
+	background: url('dump/eyes/eyes2.png');
+	transition: .7s;
+}
+.feyes3{
+	background: url('dump/eyes/eyes3.png');
+	transition: .7s;
+}
+.fhair1{
+	background: url('dump/hair/hair1.png');
+	transition: .7s;
+}
+.fhair2{
+	background: url('dump/hair/hair2.png');
+	transition: .7s;
+}
+.fhair3{
+	background: url('dump/hair/hair3.png');
+	transition: .7s;
+}
+.fface1{
+	background: url('dump/faces/face1.png');
+	transition: .7s;
+}
+.fface2{
+	background: url('dump/faces/face2.png');
+	transition: .7s;
+}
+.fface3{
+	background: url('dump/faces/face3.png');
+	transition: .7s;
+}
+.colors{
+	position: absolute;
+	height: 70vh;
+	width: 250px;
+	backdrop-filter: blur(2px) grayscale(100%);
+	right: .7%;
+	top: 3%; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 3px 3px 14px rgba(0, 0, 0, .8),
+	-3px -3px 14px rgba(0, 0, 0, .7);
+	border-radius: 20px; 
+}
+.mbody{
+	position: absolute;
+	height: 300px;
+	width: 500px;
+	bottom: -6%;
+	left: 20%;
+}
+.fshape{
+	position: absolute;
+	height: 350px;
+	width: 350px;
+	left: 29%;
+	z-index: 1;
+}
+.hair{
+	position: absolute;
+	height: 430px;
+	width: 470px;
+	left: 24%;
+	z-index: 1;
+}
+.eyes{
+	position: absolute;
+	height: 90px;
+	width: 90px;
+	left: 39%;
+	top: 30%;
+	z-index: 1;
+}
+.right{
+	position: absolute;
+	height: 174px;
+	top: 5%;
+	left: 90%;
+	transform: rotate(-7deg);
+}
+.eyebrow{
+	position: absolute;
+	height: 170px;
+	width: 170px;
+	left: 40%;
+	top: 25%;
+	z-index: 1;
+}
+.nose{
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	top: 44%;
+	left: 44.5%;
+	z-index: 1;
+}
+.lips{
+	position: absolute;
+	height: 120px;
+	width: 120px;
+	top: 61%;
+	left: 43.6%;
+	z-index: 1;
+}
+.beard{
+	position: absolute;
+	height: 310px;
+	width: 310px;
+	top: 27%;
+	left: 33%;
+	z-index: 1;
+}
+.show{
+	position: absolute;
+	opacity: 1;
+	transition: .5s;
+}
+.hide{
+	position: absolute;
+	opacity: 0;
+	transition: .5s;
+}
+.face2{
+	position: absolute;
+	left: -6%;
+	top: 16%;
+	height: 360px;
+	width: 420px;
+}
+.face3{
+	position: absolute;
+	left: -38%;
+	top: 16%;
+	height: 390px;
+	width: 590px;	
+}
+.hair2{
+	position: absolute;
+	height: 420px;
+	width: 490px;
+	top: -10%;
+	left: -3%;
+}
+.hair3{
+	position: absolute;
+	height: 452px;
+	width: 690px;
+	top: -9%;
+	left: -25.8%;	
+}
+.eyes1{
+	position: absolute;
+	height: 160px;
+	width: 160px;
+	top: 8%;
+	left: 13%;
+}
+.eyes2{
+	position: absolute;
+	height: 160px;
+	width: 160px;
+	top: -1%;
+	left: 20%;
+}
+.eyes3{
+	position: absolute;
+	height: 160px;
+	width: 160px;
+	top: -1%;
+	left: 20%;
+}
+.lips2{
+	position: absolute;
+	top: -43%;
+}
+.lips3{
+	position: absolute;
+	top: -47%;	
+}
+.beard2{
+	position: absolute;
+	height: 390px;
+	width: 390px;
+	top: -19%;
+	left: -15%;
+}
+.beard3{
+	position: absolute;
+	top: -15%;
+	left: -15%;
+}
